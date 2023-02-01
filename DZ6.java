@@ -4,7 +4,8 @@ HashSet. В программе содать метод add добавляющи�
  Формат данных Integer. */
 import java.util.HashMap;   
 public class DZ6 {
-    private static HashMap<Integer,Integer> hm  = new HashMap<>();
+    private static HashMap<Integer,Object> hm  = new HashMap<>();
+    private static final Object OBJ = new Object();    
     public static void main(String[] args) {
         add(50);
         add(50);
@@ -19,6 +20,6 @@ public class DZ6 {
         return hm.keySet().toString();
     }
     private static void add(Integer num) {
-        hm.put(num, num);
+        hm.put(num, OBJ);
     }    
 }
